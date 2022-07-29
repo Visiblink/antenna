@@ -7,7 +7,14 @@ Antenna is a simple python player for internet radio streams.
 Running the application:
 ------------------------
 
-To run the script, you'll need Python 3.x installed. You'll probably also need to install the playsound module using pip. The script runs on Debian 11, but might require alteration to run on other distributions or Windows.
+To run the script, you'll need Python 3.x installed. You'll also need to install the playsound module using pip3. 
+
+The script runs on Debian 11, but might require alteration to run on other distributions or Windows.
+
+For a very simple installation on a vanilla Debian system, drop a copy of the script in /opt/ and add the following line to the .bashrc file in your home directory:
+```
+alias antenna='python3 /opt/antenna.py'
+```
 
 
 General:
