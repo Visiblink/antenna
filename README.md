@@ -4,11 +4,7 @@ Antenna is a simple python player for internet radio streams.
 Running the application:
 ========================
 
-If you've downloaded the pyinstaller build, enter the application directory and type ./antenna
-
-You can also move or copy the file to a directory in the path, like /usr/bin/, which will allow you to launch the program from anywhere, simply by typing "antenna".
-
-If you've downloaded the script, you'll need Python 3.x installed. You'll also need to install playsound from pip.
+To run the script, you'll need Python 3.x installed. You'll also need to install playsound from pip.
 
 
 General:
