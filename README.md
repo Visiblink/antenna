@@ -14,7 +14,7 @@ If you've downloaded the script, you'll need Python 3.x installed. You'll also n
 General:
 ========
 
-All commands must be followed by the <ENTER> key.
+All commands must be followed by the ENTER key.
 
 Some terminal clients will permit you to paste with the Shift-CTRL-v key combination. This is handy for entering URLs.
 
