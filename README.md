@@ -32,7 +32,7 @@ python3 -m pip install playsound
 ```
 alias antenna='python3 /opt/antenna.py'
 ```
-
+5. Start the application by typing ```antenna``` in your console.
 
 General:
 --------
@@ -83,4 +83,4 @@ Press "p" at the main menu and enter the URL at the prompt.
 Database Location:
 ------------------
 
-The station database is in a python dictionary file called "antennarc" in your ~/.config directory. The file can be edited directly.
+The station database is in a python dictionary file called "antennarc" in your ~/.config directory. The file can be edited directly. Note: now that I am aware of the XDG specification, this file will move to ~/.local/share/antenna/antennarc in future versions.
