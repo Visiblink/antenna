@@ -11,14 +11,18 @@ This script has been tested on Debian 11 "Bullseye".
 
 To run the script, you'll need Python 3.x and pip installed. 
 
-Here's a simple installation guide:
+Here's a simple installation guide for a vanilla Debian 11 system:
 
 1. as root, execute the following commands:
 ```
 apt-get install python3
 apt-get install python3-pip
 ```
-2. as root, move the antenna.py script to the /opt directory.
+
+2. as root, navigate into the directory where you have the antenna.py script and move it to the /opt directory:
+```
+mv antenna.py /opt/
+```
 
 3. as user, execute the following command:
 ```
