@@ -7,32 +7,23 @@ Antenna is a simple python player for internet radio streams.
 Installing the application:
 ---------------------------
 
-This script has been tested on Debian 11 "Bullseye".
+This script has been tested on Debian 11 "Bullseye". It's alpha software!
 
-To run the script, you'll need Python 3.x and pip installed. 
+To install on an amd_64 Debian 11 system: 
 
-Here's a simple installation guide for a vanilla Debian 11 system:
+1. download the .deb file associated with the version 0.1.1 release.
+2. as root, enter the folder with the .deb file and execute the following command: ```apt install ./antenna_0.1.1_amd64.deb```
+3. to start the program, type ```antenna```
+4. to uninstall type ```apt remove antenna```
 
-1. as root, execute the following commands:
-```
-apt-get install python3
-apt-get install python3-pip
-```
+On other systems, you can install as follows:
 
-2. as root, navigate into the directory where you have the antenna.py script and move it to the /opt directory:
-```
-mv antenna.py /opt/
-```
+1. download the antenna.py script. Rename it "antenna." As root, make the file executable by typing ```chmod +x antenna```
+2. place the file in /usr/bin/
+3. make sure that python3, gst123, and libatk-adaptor are installed on your system.
+4. type ```antenna``` to start the program.
+5. to uninstall simply delete /usr/bin/antenna.
 
-3. as user, execute the following command:
-```
-python3 -m pip install playsound
-```
-4. as user, add the following line to the alias section of the .bashrc file in your home directory:
-```
-alias antenna='python3 /opt/antenna.py'
-```
-5. Start the application by typing ```antenna``` in your console.
 
 General:
 --------
