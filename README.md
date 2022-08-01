@@ -74,4 +74,4 @@ Press "p" at the main menu and enter the URL at the prompt.
 Database Location:
 ------------------
 
-The station database is in a python dictionary file called "antennarc" in your ~/.config directory. The file can be edited directly. Note: now that I am aware of the XDG specification, this file will move to ~/.local/share/antenna/antennarc in future versions.
+The station database is in a python dictionary file called "antennarc" in the ~/.local/share/antenna/ directory.
