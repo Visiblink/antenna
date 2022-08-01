@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 #    Antenna - an internet radio stream player.
 #    Copyright (C) 2022 Visiblink
@@ -16,44 +17,19 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
-import multiprocessing
 import time
-from playsound import playsound
 from sys import exit
-
-# The functions in the class below were added to suppress logging to stdout by libva.
-# The code is by users jeremiahbuddha and randlet, "Suppress stdout / stderr print
-# from Python functions," Stack Overflow, https://stackoverflow.com/questions/
-# 11130156/suppress-stdout-stderr-print-from-python-functions, CC-BY-SA 4.0.
-
-class suppress_stdout_stderr(object):
-
-    def __init__(self):
-        self.null_fds =  [os.open(os.devnull,os.O_RDWR) for x in range(2)]
-        self.save_fds = [os.dup(1), os.dup(2)]
-
-    def __enter__(self):
-        os.dup2(self.null_fds[0],1)
-        os.dup2(self.null_fds[1],2)
-
-    def __exit__(self, *_):
-        os.dup2(self.save_fds[0],1)
-        os.dup2(self.save_fds[1],2)
-        for fd in self.null_fds + self.save_fds:
-            os.close(fd)
-
-# End of code by users jeremiahbuddha and randlet
 
 # The functions below are by user junglejet, "How to save a dictionary to a file?" Stack Overflow,
 # https://stackoverflow.com/questions/19201290/how-to-save-a-dictionary-to-a-file, CC-BY-SA 4.0.
 
 def save_dict_to_file(dic):
-    f = open(os.path.join(os.path.expanduser('~'), '.config', 'antennarc'),'w')
+    f = open(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna', 'antennarc'),'w')
     f.write(str(dic))
     f.close()
 
 def load_dict_from_file():
-    f = open(os.path.join(os.path.expanduser('~'), '.config', 'antennarc'),'r')
+    f = open(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna', 'antennarc'),'r')
     data=f.read()
     f.close()
     return eval(data)
@@ -229,15 +205,9 @@ def move_station (internal_station_list, user_choice_integer):
         move_station(internal_station_list, user_choice_integer)
 
 def play_stream(stream_url):
-    # The code below is modified from a snippet by user Artemis, "How to stop audio with playsound module?" Stack Overflow,
-    # https://stackoverflow.com/questions/57158779/how-to-stop-audio-with-playsound-module, CC-BY-SA 4.0.
-    with suppress_stdout_stderr():
-        player = multiprocessing.Process(target=playsound, args=(stream_url,))
-        player.start()
     print()
-    input("Press ENTER to stop playback ")
-    player.terminate()
-    # End of code by user Artemis.
+    print("Press 'q' to stop playback ")
+    os.system(f'gst123 -q {stream_url}')
     main_menu()
 
 def station_display(internal_station_list):
@@ -268,7 +238,9 @@ def station_display(internal_station_list):
     print()
 
 def main_menu():
-    if os.path.isfile(os.path.join(os.path.expanduser('~'), '.config', 'antennarc'))==False:
+    if os.path.isfile(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna', 'antennarc'))==False:
+        if os.path.isdir(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna', 'antennarc'))==False:
+            os.mkdir(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna'))
         station_list={}
     else:
         station_list = load_dict_from_file()
