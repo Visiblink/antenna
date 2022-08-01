@@ -1,7 +1,7 @@
 ![antenna](https://user-images.githubusercontent.com/82686470/182243407-9671c8be-32d3-46de-b0f0-27fc830284f8.png)
 
 
-Antenna is a simple python player for internet radio streams.
+Antenna is a console player for internet radio streams.
 
 
 Installing the application:
