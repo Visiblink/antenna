@@ -239,7 +239,7 @@ def station_display(internal_station_list):
 
 def main_menu():
     if os.path.isfile(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna', 'antennarc'))==False:
-        if os.path.isdir(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna', 'antennarc'))==False:
+        if os.path.isdir(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna'))==False:
             os.mkdir(os.path.join(os.path.expanduser('~'), '.local', 'share', 'antenna'))
         station_list={}
     else:
