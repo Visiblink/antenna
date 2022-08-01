@@ -25,8 +25,8 @@ On other systems, you can install as follows:
 5. to uninstall simply delete /usr/bin/antenna.
 
 
-General:
---------
+General navigation:
+-------------------
 
 All commands must be followed by the ENTER key.
 
