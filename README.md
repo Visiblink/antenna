@@ -11,8 +11,8 @@ This script has been tested by me on Debian 11 "Bullseye". Beware: it's alpha so
 
 To install on an amd_64 Debian 11 system: 
 
-1. download the .deb file associated with the version 0.1.1 release.
-2. as root, enter the folder with the .deb file and execute the following command: ```apt install ./antenna_0.1.1_amd64.deb```
+1. download the .deb file associated with the version 0.1.2 release.
+2. as root, enter the folder with the .deb file and execute the following command: ```apt install ./antenna_0.1.2_amd64.deb```
 3. to start the program, type ```antenna```
 4. to uninstall type ```apt remove antenna```
 
