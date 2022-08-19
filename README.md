@@ -1,4 +1,4 @@
-![antenna](https://user-images.githubusercontent.com/82686470/185514254-5a5e725a-8254-4123-acb9-905cfac53749.png)
+![antenna](https://user-images.githubusercontent.com/82686470/185515011-58f0385a-7e4b-47b2-aa74-863b33e22ab1.png)
 
 
 Antenna is a console player for internet radio streams.
