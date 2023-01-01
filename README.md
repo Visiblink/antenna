@@ -3,7 +3,7 @@
 
 Antenna is a console player for internet radio streams.
 
-This script has been tested by me on Debian 11 "Bullseye". Beware: it's alpha software! I'll change that designation after I've used it for a few months.
+This script has been tested by me on Debian 11 "Bullseye" for several months without problems.
 
 Installing the application:
 ---------------------------
