@@ -95,7 +95,7 @@ def station_display(station_list):
     if total_entries <= 12:
         for i in station_list:
             print(i,station_list[i]['Name'])
-    if total_entries > 12:
+    if total_entries > 12 and total_entries < 25:
         col1 = 1
         col2 = int(total_entries/2) + total_entries%2 + 1
         rows = int(total_entries/2) + total_entries%2
@@ -108,6 +108,23 @@ def station_display(station_list):
                 print(f"{str(col1) + ' ' + station_list[col1]['Name']:<30}{str(col2) + ' ' + station_list[col2]['Name']}")
             col1 = col1 + 1
             col2 = col2 + 1
+    if total_entries > 24:
+        rmndr = total_entries%3
+        if rmndr == 0:
+            rows = int(total_entries/3)
+        else:
+            rows = int(total_entries/3) + 1
+        col1 = 1
+        col2 = rows + 1
+        col3 = (rows*2) + 1
+        for i in range (0, rows):
+            if col3 > total_entries:
+                print(f"{str(col1) + ' ' + station_list[col1]['Name']:<30}{str(col2) + ' ' + station_list[col2]['Name']}")
+            else:
+                print(f"{str(col1) + ' ' + station_list[col1]['Name']:<30}{str(col2) + ' ' + station_list[col2]['Name']:<30}{str(col3) + ' ' + station_list[col3]['Name']}")
+            col1 = col1 + 1
+            col2 = col2 + 1
+            col3 = col3 + 1
     print()
 
 def input_error_filter (action, station_list):
