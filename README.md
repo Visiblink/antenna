@@ -18,7 +18,7 @@ To install on an amd_64 Debian 12 system:
 
 On other systems, you can install as follows:
 
-1. download the antenna.py script. Rename it "antenna." As root, make the file executable by typing ```chmod +x antenna```
+1. download the antenna.py script. Rename it "antenna". As root, make the file executable by typing ```chmod +x antenna```
 2. place the file in /usr/bin/
 3. make sure that python3, gst123, and libatk-adaptor are installed on your system.
 4. type ```antenna``` to start the program.
